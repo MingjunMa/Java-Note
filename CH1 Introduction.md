@@ -10,7 +10,7 @@ JVM(Java Virtual Machine): Java虚拟机运行环境，是Java跨平台运行的
 
 <img src="assets/R4f1ba2599978af4366d80742cf9c579e" style="zoom:70%;"/>
 
-
+---
 
 ### 2.数据类型
 
@@ -41,7 +41,7 @@ Java为强类型语言，要求变量先定义后使用。Java数据类型分为
 
 包含类(class), 接口(interface), 数组等。
 
-
+---
 
 ### 3.包机制
 
