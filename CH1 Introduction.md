@@ -8,7 +8,7 @@ JRE(Java Runtime Environment): Java运行环境，是Java程序在运行时所�
 
 JVM(Java Virtual Machine): Java虚拟机运行环境，是Java跨平台运行的核心，提供Java程序与系统底层之间的交互。
 
-<img src="assets/R4f1ba2599978af4366d80742cf9c579e" style="zoom:70%;" align='left'/>
+<img src="assets/R4f1ba2599978af4366d80742cf9c579e" style="zoom:70%;"/>
 
 
 
