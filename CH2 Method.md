@@ -94,3 +94,61 @@ public static int fac(int num){
     return num*fac(num-1);
 }
 ```
+---
+
+### 7.静态方法与非静态方法
+
+**静态方法**采用关键字static，静态方法与非静态方法区别在于，在不同类A,B中，若class A中存在**可访问的静态方法**，则在class B中无需new一个A对象即可以直接调用A中的静态方法。如：
+
+```java
+//静态方法举例
+public class A{
+	public static void test(){
+        System.out.println("From A");
+    }
+}
+
+public class B{
+    public static void main(String[] args){
+        //直接调用 类名.方法()
+        A.test();
+    }
+}
+
+output:"From A"
+```
+
+**非静态方法**中则不可直接调用，需要先new一个类对象后，通过对象中的方法调用。
+
+```java
+//非静态方法举例
+public class A{
+	public void test(){
+        System.out.println("From A");
+    }
+}
+
+public class B{
+    public static void main(String[] args){
+        //new实例对象后调用
+        A a = new A();
+        a.test();
+    }
+}
+
+output:"From A"
+```
+
+**静态方法生命周期**：静态方法随着类的初始化而初始化，且仅初始化一次。因此若存在A,B两个方法，A为静态方法，若该方法中使用了非静态方法B，则编译会报错，这是因为在A静态方法随着类初始化时，无法获得未初始化的非静态方法B。需要实例化后才可调用。
+
+```java
+public class Demo{
+	public static void A(){
+		B();
+	}
+	
+	public void A(){}
+}
+
+output: error
+```
