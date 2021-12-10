@@ -1,8 +1,9 @@
 ## Method
 
 ### 1.方法的定义
+System(类).out(输出对象).println(方法)。方法包含于类或对象中。
 
-Java中执行某一功能的一类代码称为方法，其实质等同于C语言中的函数。一般而言Java中的方法由方法头和方法体组成。方法头包括修饰符(public,private,static...)，返回类型(int,void...)，方法名称及传入参数组成。方法体中则为具体的实现代码。
+Java中执行某一功能的一类代码称为方法，其实质等同于C语言中的函数。一般而言Java中的方法由方法头和方法体组成。方法头包括修饰符(public,private,static...)，返回类型(int,void...)，方法名称及传入参数组成。方法体中则为具体的实现代码。 **方法名+参数=方法签名**
 
 根据Java规范，方法应该遵循**原子性**，即一个方法中仅完成一个功能，方法的名称应该遵循**驼峰命名法**。
 
@@ -30,9 +31,14 @@ public static void add(int num1, int num2){
 
 ### 3.方法的调用
 
-若一个方法有返回值，则方法的调用采用赋值形式，如int max = max(a,b);
+返回值使用return，return在该方法最外层的括号里。如果值在if等语句里，则在语句里赋值比如result，然后最后最外层括号写return result；return也意味着终止方法了。
 
-若一个方法无返回值，则采用obj.method(args[])形式调用，如System.out.println();
+若一个方法有返回值，则方法的调用被当成一个值，采用赋值形式，如int max = max(a,b);
+
+若一个方法无返回值，则方法调用一定是一个语句，采用obj.method(args[])形式调用，如System.out.println();
+
+Java只有值传递，没有引用传递。
+![image](https://user-images.githubusercontent.com/88830625/129857811-862674fc-20c8-43c5-85ee-0f213d8fa9d0.png)
 
 ---
 
@@ -64,7 +70,7 @@ public class test{
 
 ### 5.方法中的可变参数
 
-由于在应用中无法确定输入方法中参数的个数，因此采用可变参数来进行参数的传入。可变参数使用‘...’来表示，其只可以位于参数列表的最后一项。
+由于在应用中无法确定输入方法中参数的个数，因此采用可变参数来进行参数的传入。可变参数使用‘...’来表示，必须放到参数列表的最后一项，而且传入该参数位置的参数必须是同一类型的。
 
 ```java
 public static void test(int num, double... num2){}
